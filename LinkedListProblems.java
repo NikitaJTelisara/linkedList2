@@ -76,4 +76,34 @@ public class LinkedListProblems {
         createStack(start, k, resultStart, resultEnd);
         return resultStart;
     }
+    
+    /* iterative
+    public static LinkedListNode swapKNodes(LinkedListNode n, int k1) {
+        LinkedListNode result = null;
+        LinkedListNode n1 = null;
+        int k = k1;
+        if (n == null || n.next == null) {
+            return n;
+        }
+        while (n != null) {
+            Stack s = new Stack();
+            while (n != null && k > 0) {
+                s.push(n.data);
+
+                k--;
+                n = n.next;
+            }
+            while (!s.isEmpty()) {
+                if (n1 == null) {
+                    n1 = new LinkedListNode(s.pop().data);
+                    result = n1;
+                } else {
+                    n1.next = new LinkedListNode(s.pop().data);
+                    n1 = n1.next;
+                }
+            }
+            k = k1;
+        }
+        return result;
+    }*/
 }
